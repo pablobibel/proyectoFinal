@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <title>Inventario</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  <link rel="icon" href="bonaerense.png" >
+  <link href="https://cdn.jsdelivr.net/npm/sweetalert2@11.7.3/dist/sweetalert2.min.css" rel="stylesheet">
+  <link rel="stylesheet" href="css/adminStyle.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bootswatch/5.2.3/flatly/bootstrap.min.css">
+  <script defer src="js/admin.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11.7.3/dist/sweetalert2.all.min.js"></script>
+
+
+</head>
+  <!-- AVISO DE MAXIMA IMPORTANCIA, AGARRE BOOTSTRAP TARDE Y BUENO NO VOY A CAMBIAR LOS CSS QUE YA TENIA 
+  DE LA PAGINA ANTERIOR, PERO SOY MEDIO BOLUDO Y TARDE MAS CON ESTO, SORRY. -->
+<body>
+  <header></header>
+
+  
+  <nav class="navbar navbar-expand-lg navbar-light bg-light">
+    <div class="container-fluid">
+      <a class="navbar-brand" href="#">Inventory</a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarNav">
+        <ul class="navbar-nav">
+          <li class="nav-item">
+            <a class="nav-link" href="#">Link 1</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#">Link 2</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#">Link 3</a>
+          </li>
+        </ul>
+        <div class="navbar-text ms-auto">
+          <div class="weather-app">
+            <div class="weather-info">
+              <div class="temperature">
+                <span id="temp"></span>
+                <span>°C</span>
+              </div>
+              <div class="city">
+                <span id="city"></span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </nav>
+  
+  
+  
+
+  
+
+  <main>
+    <div class="container">
+      <!-- APPLICATION -->
+      <div id="App" class="row pt-5">
+        <div class="col-md-4 ml-3">
+            <div class="card">
+              <div class="card-header">
+                <h4>Agrega un ITEM</h4>
+              </div>
+                <form id="product-form" class="card-body">
+                  <div id="form-group">
+                    <label for="product-name">Nombre del ITEM</label>
+                    <input type="text" id="name"required name="product-name" class="form-control">
+                  </div>
+
+                  <div id="form-group">
+                    <label for="product-stock">Cantidad</label>
+                    <input type="number" id="stock" required name="stock" class="form-control">
+                  </div> 
+
+                  <div id="form-group">
+                    <label for="year">Año</label><br>
+                    <input type="number" class="form-control"  required value="2023" min="2010" id="year" name="year"><br>
+        
+                  <label for="description">Description:</label><br>
+                  <textarea type="TEXT" cols="1" rows="5" style="resize:none; width: 320px;"class="form-control" placeholder="AGREGUE UNA BREVE DESCRIPCION DEL PRODUCTO" name="description" id="description"></textarea>
+                 
+                 <label for="picture-url" class="form-label">URL de la imagen de portada</label><br>
+                 <input type="text" class="form-control" id="picture-url"><br>
+          
+                
+                <select required class="form-select" aria-label="Default select example" id="depositoSelection">
+                    <option  DISABLED selected>---- SELECCIONE UN DEPOSITO --- </option>
+                    <option value="Deposito Ancaste">Deposito Ancaste</option>
+                    <option value="Deposito Brasil">Deposito Brasil</option>
+                    <option value="Deposito Artigas">Deposito Artigas</option>
+                  </select>
+          <BR><BR></BR></BR>
+                <div class="button-group">
+                <button type="submit" value="" class="btn btn-primary btn-block">AGREGAR ITEM</button></form>
+                </div>
+        </div>
+        
+      </div>
+        </div>    <div class="col-md-8">
+          <div id="product-list" class="col-md-4">
+          </div>
+      </div>
+    </div>
+
+  </main>
+</html>
+

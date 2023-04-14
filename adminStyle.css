@@ -1,0 +1,12 @@
+.image-square {
+  display: auto;
+  width: 250px;
+  height: 150px;
+  border: 1px solid black;
+  margin: 10px;
+  transition: transform 0.2s ease-in-out;
+}
+
+.image-square:hover {
+  transform: scale(1.2);
+}
